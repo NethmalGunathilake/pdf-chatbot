@@ -76,7 +76,7 @@ Question: {question}"""
         try:
             response = client.models.generate_content(model=name, contents=prompt)
             return response.text, name
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             last_error = e
     raise RuntimeError(f"All models failed. Last error: {last_error}")
 

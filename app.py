@@ -42,7 +42,7 @@ if question:
             top = retrieve(question, st.session_state.chunks, st.session_state.vectors)
             try:
                 answer, model = ask_llm(question, [c for c, _ in top])
-            except Exception:
+            except Exception:  # noqa: BLE001
                 answer = "Sorry, the AI service is busy right now. Please try again in a minute."
         st.markdown(answer)
         with st.expander("Sources used"):
