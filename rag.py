@@ -1,10 +1,11 @@
 import os
 import re
+
+import numpy as np
 from dotenv import load_dotenv
-from pypdf import PdfReader
 from fastembed import TextEmbedding
 from google import genai
-import numpy as np
+from pypdf import PdfReader
 
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))

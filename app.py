@@ -1,5 +1,6 @@
 import streamlit as st
-from rag import load_pdf, chunk_text, embed_texts, retrieve, ask_llm
+
+from rag import ask_llm, chunk_text, embed_texts, load_pdf, retrieve
 
 st.set_page_config(page_title="PDF Chatbot", page_icon="📄")
 st.title("📄 Chat with your PDF")
