@@ -1,0 +1,6 @@
+streamlit
+pypdf
+fastembed
+numpy
+google-genai
+python-dotenv
